@@ -1,1 +1,17 @@
 
+body {
+background-color: #2507ab;
+}
+
+h1 {
+  font-family:'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  text-align: center;
+  color: #ccffcc;
+}
+h2 {
+  font-family:'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  text-align: center;
+  color: #957ff5;
+}

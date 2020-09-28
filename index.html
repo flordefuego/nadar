@@ -22,7 +22,7 @@
 
         <canvas id="myCanvas" width="400px" height="400px" aling="left"></canvas>
           <br>
-       <button onclick="osc(20).rotate(0, 0.1).modulate(osc()).out()"> oscillator </button>
+       <button onclick="osc(20).rotate(0, 0.1).modulate(osc(5).thresh()).out()"> oscillator </button>
       <button onclick="useCamera()"> camera </button>
     <button onclick="feedback()"> feedback </button>
       <script>
@@ -30,12 +30,12 @@
       var hydra = new Hydra({
         canvas: document.getElementById("myCanvas")
       })
-       osc(10, 0.1, 2).rotate(0, 0.1).modulate(voronoi(4,0.1,0)).out()
+       osc(10, 0.1, 2).rotate(0, 0.1).modulate(voronoi(4,0.8,0)).out()
       
       // create functions to use with buttons
       function useCamera() {
         s0.initCam()
-        src(s0).color(-1, Math.random()*2, 1).colorama(0.001).out()
+        src(s0).color(0.3, Math.random()*2, 1).colorama(0.001).out()
       }
       
       function feedback() {
@@ -43,6 +43,8 @@
           .layer(src(o0).mask(shape(4, 0.6, 0).rotate(()=>time)))
           .scrollX([0.005, -0.005])
           .scrollY(0.005)
+          .scale(0.999)
+          .colorama(0.001)
           .out(o1)
         
         render(o1)

@@ -30,17 +30,17 @@
       var hydra = new Hydra({
         canvas: document.getElementById("myCanvas")
       })
-       osc(10, 0.1, 0.8).rotate(0, 0.1).kaleid().color(-1, 1).out()
+       osc(10, 0.1, 2).rotate(0, 0.1).modulate(voronoi(4,0.1,0)).out()
       
       // create functions to use with buttons
       function useCamera() {
         s0.initCam()
-        src(s0).color(-1, Math.random()*2, 1).colorama().out()
+        src(s0).color(-1, Math.random()*2, 1).colorama(0.001).out()
       }
       
       function feedback() {
         src(o1)
-          .layer(src(o0).mask(shape(4, 0.4, 0)))
+          .layer(src(o0).mask(shape(4, 0.6, 0).rotate(()=>time)))
           .scrollX([0.005, -0.005])
           .scrollY(0.005)
           .out(o1)

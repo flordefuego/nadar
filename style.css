@@ -39,6 +39,6 @@ button {
   overflow-y: hidden;
   position: fixed;
   /* here is your hydra screenshot (for mobile) */
-  background-image: url("https://i.ibb.co/HqDH62t/cartas.gif");
+  /*background-image: url("https://i.ibb.co/HqDH62t/cartas.gif");*/
   background-size: cover;
 }

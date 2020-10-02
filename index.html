@@ -50,7 +50,7 @@
         });
       }
       
-       osc(10, 0.1, 2).rotate(0, 0.1).modulate(voronoi(4,0.8,0)).out()
+      src(o0).modulate(noise(3),0.008).scrollY(-0.003).layer(noise(3).color(0,1,7).luma(0.2)).out()
       
       // create functions to use with buttons
       function useCamera() {

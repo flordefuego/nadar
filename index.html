@@ -27,11 +27,7 @@
     <button onclick="feedback()"> feedback </button>
       <script>
         
-      // create a new hydra-synth instance
-      var hydra = new Hydra({
-        canvas: document.getElementById("myCanvas")
-        
-       // https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
+           // https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
       let mobileCheck = function() {
         let check = false;
         (function(a) {
@@ -52,8 +48,8 @@
         var hydra = new Hydra({
           canvas: document.getElementById("myCanvas")
         });
-      }  
-      })
+      }
+      
        osc(10, 0.1, 2).rotate(0, 0.1).modulate(voronoi(4,0.8,0)).out()
       
       // create functions to use with buttons

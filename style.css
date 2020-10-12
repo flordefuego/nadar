@@ -7,7 +7,7 @@ h1 {
   font-family:'Arial Narrow', Arial, sans-serif;
   font-style: italic;
   text-align: center;
-  color: #ccffcc;
+  color: blue;
 }
 h2 {
   font-family:'Arial Narrow', Arial, sans-serif;
@@ -34,7 +34,7 @@ button {
   height: 5em;
   display: flex;
   align-items: center;
- /*justify-content: center;*/
+ justify-content: center;
   font-family:'Arial Narrow', Arial, sans-serif;
   font-style: italic;
   text-align: center;

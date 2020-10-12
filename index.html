@@ -32,6 +32,16 @@ function msg() {
   alert("Utiliza los botones para construir tus visuales. Los links en las imagenes te llevan a Hydra para que puedas ver su código");
 }
 </script>
+     
+    <form>
+  <input type="button" value="instrucciones" onclick="msge()" class="boton2">
+</form>
+
+<script>
+function msge() {
+  alert("Utiliza los botones para construir tus visuales. Los links en las imagenes te llevan a Hydra para que puedas ver su código");
+}
+</script>
     <div>
       <a href= "https://hydra.ojack.xyz/?code=bGV0JTIwYSUzRCUyMHNoYXBlKDMlMkMwLjAzKS5yb3RhdGUoMC41KSUwQWxldCUyMGIlM0QlMjBzaGFwZSgzJTJDMC4wMykucm90YXRlKC0wLjUpJTBBc2hhcGUoMyUyQzAuMDMpLmFkZChhJTJDMSkuYWRkKGIlMkMxKS5hZGQoc2hhcGUoMyUyQzAuMDMpLnJvdGF0ZSgxKSkuc2NhbGUoMikub3V0KG8xKSUwQSUwQSUwQSUwQXNyYyhvMSklMEEucmVwZWF0KDQlMkM0KSUwQS5sYXllcihzcmMobzEpJTBBLnNjYWxlKDAuNSklMEEucmVwZWF0KDIlMkMyKS5sdW1hKCkpJTBBLnNjcm9sbFkoMCUyQy0wLjIpJTBBLnJvdGF0ZSgoKSUzRCUzRXRpbWUqMC4xKSUwQS5tb2R1bGF0ZVJvdGF0ZShvc2MoNSkucm90YXRlKDAlMkMwLjIpJTJDMiklMEElMkYlMkYuY29udHJhc3QoMC45OSklMEEuYWRkKHNyYyhvMCkuY29sb3IoMC42JTJDMCUyQzEpLnNjcm9sbFkoLTAuMDAxKSUyQzAuOCklMEElMjAlMjAub3V0KCklMEElMEElMEFzcGVlZCUzRCUyMDAuMw==">
       <h2> <img src="imgs/laestrella.gif" alt="laestrella"> </h2>
@@ -43,7 +53,7 @@ function msg() {
       <p>Utiliza los botones para modificar el fondo</p>
         </div>  
         <br>
-       <button onclick="osc(20).rotate(0, 0.1).modulate(noise(3),()=>mouse.x*0.01).color(0.6,0.5,1).modulate(o0,0.1).out(o0)"> nadar </button>
+       <button onclick="osc(20).rotate(0, 0.1).modulate(noise(3),()=>mouse.x*0.01).color(0.6,0.5,1).modulate(o0,0.1).out(o0)"> mueve el mouse </button>
       <button onclick="degradado()"> degradado </button>
       <button onclick="useCamera()"> camara </button>
     <button onclick="feedback()"> feedback </button>
@@ -100,7 +110,7 @@ function msg() {
       
       function feedback() {
         src(o1)
-          .layer(src(o0).mask(shape(4, 1, 0).scale(0.5,0.5).rotate(()=>time)))
+          .layer(src(o0).mask(shape(4, 1.5, 0).scale(0.5,0.5).rotate(()=>time)))
           .scrollX([0.005, -0.005])
           .scrollY(0.005)
           .scale(0.999)

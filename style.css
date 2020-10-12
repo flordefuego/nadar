@@ -32,11 +32,12 @@ button {
 .box{
  background-color: rgba(4, 0, 255, 0.5); 
  height:40px;
- width: 60px;
+ width: 100px;
   font-family:'Arial Narrow', Arial, sans-serif;
   font-style: italic;
   text-align: center;
-  color: #bfddf5;  
+  color: #bfddf5;
+  margin: 10px 150px 150px 0;
 }
 
 #myCanvas {

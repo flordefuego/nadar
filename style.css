@@ -23,6 +23,20 @@ h3 {
 }
 
 .boton {
+  background-color:#f5460c;
+  font-family:'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  padding: 10px;
+  margin: 10px;
+}
+.boton2 {
+  background-color:#d272ed;
+  font-family:'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  text-align: center;
   display: inline-block;
   font-size: 16px;
   padding: 10px;

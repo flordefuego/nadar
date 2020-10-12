@@ -12,10 +12,11 @@
    <div class="box">
     <h1>NADAR</h1>
      <br>
-     <br>
-      <h2>Pixeles y código flotan en las aguas del ciberespacio</h2>
     </div>
-    <br>
+    <div class="box1" style="background-color: rgba(245, 70, 12,0.8) height:40px; margin-top:10px;">
+    <h2>Pixeles y código flotan en las aguas del ciberespacio</h2>
+    </div>
+      <br>
     <br>
     <div>
       <a href= "https://hydra.ojack.xyz/?code=bGV0JTIwYSUzRCUyMHNoYXBlKDMlMkMwLjAzKS5yb3RhdGUoMC41KSUwQWxldCUyMGIlM0QlMjBzaGFwZSgzJTJDMC4wMykucm90YXRlKC0wLjUpJTBBc2hhcGUoMyUyQzAuMDMpLmFkZChhJTJDMSkuYWRkKGIlMkMxKS5hZGQoc2hhcGUoMyUyQzAuMDMpLnJvdGF0ZSgxKSkuc2NhbGUoMikub3V0KG8xKSUwQSUwQSUwQSUwQXNyYyhvMSklMEEucmVwZWF0KDQlMkM0KSUwQS5sYXllcihzcmMobzEpJTBBLnNjYWxlKDAuNSklMEEucmVwZWF0KDIlMkMyKS5sdW1hKCkpJTBBLnNjcm9sbFkoMCUyQy0wLjIpJTBBLnJvdGF0ZSgoKSUzRCUzRXRpbWUqMC4xKSUwQS5tb2R1bGF0ZVJvdGF0ZShvc2MoNSkucm90YXRlKDAlMkMwLjIpJTJDMiklMEElMkYlMkYuY29udHJhc3QoMC45OSklMEEuYWRkKHNyYyhvMCkuY29sb3IoMC42JTJDMCUyQzEpLnNjcm9sbFkoLTAuMDAxKSUyQzAuOCklMEElMjAlMjAub3V0KCklMEElMEElMEFzcGVlZCUzRCUyMDAuMw==">
@@ -25,9 +26,10 @@
 
         <canvas id="myCanvas"></canvas>
           <br>
-       <button onclick="osc(20).rotate(0, 0.1).modulate(noise(3)).color(1,0.8,1).modulate(o0).out(o0)"> oscillator </button>
-      <button onclick="useCamera()"> camera </button>
+       <button onclick="osc(20).rotate(0, 0.1).modulate(noise(3)).color(1,0.8,1).modulate(o0).out(o0)"> nadar </button>
+      <button onclick="useCamera()"> camara </button>
     <button onclick="feedback()"> feedback </button>
+       <button onclick="feedback2()"> feedback 2 </button>
       <script>
         
            // https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
@@ -74,6 +76,16 @@
           .out(o1)
         
         render(o1)
+      }
+              function feedback2() {
+        s0.initCam()
+         src(o0)
+         .scale(0.999)
+        .modulate(src(s0).thresh(),0.005)
+        .layer(gradient(2).repeat(8,8).modulate(noise(2)).mask(shape(3)).repeat(2,2).scrollY(0,-0.1)) 
+        .out(o0)
+        .render(o0)
+        
       }
       
     </script>

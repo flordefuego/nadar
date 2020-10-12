@@ -39,8 +39,10 @@ function msg() {
       <h2><p>click en el gif para ir al código en Hydra</p></h2>   
 
         <canvas id="myCanvas"></canvas>
+      <div class="caja">
       <p>Utiliza los botones para modificar el fondo</p>
-          <br>
+        </div>  
+        <br>
        <button onclick="osc(20).rotate(0, 0.1).modulate(noise(3),()=>mouse.x*0.01).color(0.6,0.5,1).modulate(o0,0.1).out(o0)"> nadar </button>
       <button onclick="degradado()"> degradado </button>
       <button onclick="useCamera()"> camara </button>

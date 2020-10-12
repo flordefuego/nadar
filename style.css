@@ -30,11 +30,11 @@ button {
 }
 
 .box{
- background-color: rgba(252, 248, 3, 0.5); 
-  height: 10em;
+ background-color: rgba(252, 248, 3, 0.8); 
+  height: 5em;
   display: flex;
   align-items: center;
-  justify-content: center;
+ /*justify-content: center;*/
   font-family:'Arial Narrow', Arial, sans-serif;
   font-style: italic;
   text-align: center;

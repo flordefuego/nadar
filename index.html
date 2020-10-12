@@ -14,11 +14,11 @@
       <br>
     </div>
            <form>
-  <input type="button" value="nadar?" onclick="msg()" class="boton">
+  <input type="button" value="nadar?" onclick="msj()" class="boton">
 </form>
 
 <script>
-function msg() {
+function msj() {
   alert("Pixeles y código flotan en las aguas del ciberespacio");
 }
 </script>
@@ -39,6 +39,7 @@ function msg() {
       <h2><p>click en el gif para ir al código en Hydra</p></h2>   
 
         <canvas id="myCanvas"></canvas>
+      <p>Utiliza los botones para modificar el fondo</p>
           <br>
        <button onclick="osc(20).rotate(0, 0.1).modulate(noise(3),()=>mouse.x*0.01).color(0.6,0.5,1).modulate(o0,0.1).out(o0)"> nadar </button>
       <button onclick="useCamera()"> camara </button>
@@ -77,7 +78,21 @@ function msg() {
       // create functions to use with buttons
       function useCamera() {
         s0.initCam()
-        src(s0).hue(()=>Math.sin(time)*1).color(0.3, Math.random()*2, 1).colorama(0.001).out()
+        src(s0).hue(()=>Math.sin(time)*1).saturate(1.5).contrast(1.3).color(0.3, Math.random()*2, 1).colorama(0.001).out()
+      }
+     function degradado(){
+     osc(10,0.1,()=>Math.sin(time)*2).color(1,0,1).out()
+     }   
+        
+     function feedback2() {
+        s0.initCam()
+         src(o0)
+         .scale(0.999)
+        .modulate(src(s0).thresh(),0.005)
+        .layer(gradient(2).repeat(8,8).modulate(noise(2)).mask(shape(3)).repeat(2,2).scrollY(0,-0.1)) 
+        .out(o0)
+        .render(o0)
+        
       }
       
       function feedback() {
@@ -91,16 +106,7 @@ function msg() {
         
         render(o1)
       }
-              function feedback2() {
-        s0.initCam()
-         src(o0)
-         .scale(0.999)
-        .modulate(src(s0).thresh(),0.005)
-        .layer(gradient(2).repeat(8,8).modulate(noise(2)).mask(shape(3)).repeat(2,2).scrollY(0,-0.1)) 
-        .out(o0)
-        .render(o0)
-        
-      }
+
       
     </script>
       </div>

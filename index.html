@@ -23,7 +23,7 @@
 
         <canvas id="myCanvas"></canvas>
           <br>
-       <button onclick="osc(20).rotate(0, 0.1).modulate(osc(5).thresh()).out()"> oscillator </button>
+       <button onclick="osc(20).rotate(0, 0.1).modulate(noise(3)).color(1,0.8,1).modulate(o0).out(o0)"> oscillator </button>
       <button onclick="useCamera()"> camera </button>
     <button onclick="feedback()"> feedback </button>
       <script>
@@ -59,7 +59,7 @@
       // create functions to use with buttons
       function useCamera() {
         s0.initCam()
-        src(s0).color(0.3, Math.random()*2, 1).colorama(0.001).out()
+        src(s0).hue(()=>Math.sin(time)*1).color(0.3, Math.random()*2, 1).colorama(0.001).out()
       }
       
       function feedback() {

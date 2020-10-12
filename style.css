@@ -37,7 +37,7 @@ button {
   font-style: italic;
   text-align: center;
   color: #bfddf5;
-  margin: 10px 150px 150px 0;
+  margin: 10px 150px 0 150px;
 }
 
 #myCanvas {

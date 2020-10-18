@@ -6,9 +6,10 @@ background-color: #2507ab;
 main{
   display:flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   padding:0;
-  margin:0;
+  margin:10px 0 10px 0;
 }
 
 h1 {
@@ -94,9 +95,9 @@ button {
 .caja{
 display: flex;
 flex-direction: row;
-align-items: center;
+align-items: space-around;
 background: red;
-height:40px;
+height:100px;
 width:100px;
 font-family:'Arial Narrow', Arial, sans-serif;
 font-style: italic;

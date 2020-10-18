@@ -95,10 +95,9 @@ button {
 .caja{
 display: flex;
 flex-direction: row;
-align-items: space-around;
+align-items: flex-start;
 background: red;
 height:100%;
-width:100%;
 font-family:'Arial Narrow', Arial, sans-serif;
 font-style: italic;
 text-align: center;

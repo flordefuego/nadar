@@ -36,6 +36,12 @@ h3 {
   color: #ff3333;
 }
 
+img,video{
+  padding:50px;
+  margin:50px;
+  position:absolute;
+}
+
 .boton {
   background-color:#f5460c;
   font-family:'Arial Narrow', Arial, sans-serif;
@@ -71,7 +77,7 @@ button {
   display: inline-block;
   font-size: 16px;
   padding: 10px;
-  margin: 10px;
+  margin: 50px;
 }
 
 .box{

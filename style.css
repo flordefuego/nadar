@@ -3,6 +3,14 @@ body {
 background-color: #2507ab;
 }
 
+main{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding:0;
+  margin:0;
+}
+
 h1 {
   font-family:'Arial Narrow', Arial, sans-serif;
   font-style: italic;
@@ -84,6 +92,9 @@ button {
 }
 
 .caja{
+display: flex;
+flex-direction: row;
+align-items: center;
 background: red;
 height:40px;
 width:100px;

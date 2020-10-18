@@ -94,16 +94,17 @@ button {
 
 .caja{
 display: flex;
-flex-direction: row;
+flex-direction: column;
 align-items: flex-start;
 background: red;
-height:10em;
+height:3em;
 font-family:'Arial Narrow', Arial, sans-serif;
 font-style: italic;
 text-align: center;
 color: #ff3333;
 padding: 5px;
 margin-left:150px;
+margin:25px;
 position: absolute;
 }
 

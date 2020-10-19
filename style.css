@@ -35,6 +35,14 @@ h3 {
   color: #ff3333;
 }
 
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+
+
 img,video{
   display:flex;
   flex-direction: column;
@@ -94,15 +102,16 @@ button {
   font-style: italic;
   text-align: center;
   color: #bfddf5;
-  margin: 50px 0 50px 0;
+  margin: 30px 0 50px 0;
   padding:0;
 }
 
 .caja{
 display: flex;
 flex-direction: column;
-align-items: flex-start;
-background: red;
+align-items: flex-start,center;
+background: rgb(7,33,252); 
+background: linear-gradient(104deg, rgba(7,33,252,1) 0%, rgba(253,29,29,1) 34%, rgba(255,248,0,1) 72%);
 height:3em;
 font-family:'Arial Narrow', Arial, sans-serif;
 font-style: italic;
@@ -113,7 +122,7 @@ margin-left:150px;
 margin:25px;
 }
 
-
+/*code modified from Naoto Hieda's page*/
 #myCanvas {
   width: 100%;
   height: 100%;

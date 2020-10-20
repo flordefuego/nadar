@@ -50,7 +50,15 @@ a:link {
 a:visited {
     text-decoration: none;
 }
-img,video{
+img{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding:0;
+  margin:50px;
+}
+video{
   display:flex;
   flex-direction: column;
   justify-content: space-between;

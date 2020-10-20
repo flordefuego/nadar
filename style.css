@@ -73,8 +73,9 @@ img,video{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  height:80%;
   padding:0;
-  margin:50px;
+  margin:150px;
 }
 }
 .logo{
@@ -127,7 +128,7 @@ button {
   align-items: center,strech;
   font-size: 16px;
   padding: 15px;
-  margin: 50px 0 50px 100px;
+  margin: 50px 0 50px 200px;
   align-items: center;
 }
 }
@@ -186,10 +187,10 @@ margin:25px;
 }
 @media only screen and (max-width: 600px){
 #gatitxs {
-  width: 800px;
-  height: 600px;
+  width: 400px;
+  height: 300px;
   padding:0;
-  margin: 10px 0 10px 150px;
+  margin: 10px 0 10px 250px;
 }
 }
  footer {

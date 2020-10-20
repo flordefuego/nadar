@@ -106,9 +106,7 @@ img,video{
 }
 
 button {
-  display:flex;
-  flex-direction:row;
-  align-items: center,stretch;
+  display:inline-block;
   font-size: 16px;
   padding: 15px;
   margin: 50px 0 50px 25px;

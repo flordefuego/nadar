@@ -27,6 +27,15 @@ h1, h2, h3 {
   margin:0;
 }
 
+h1{
+  font-family:'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  text-align: center;
+  color: blue;
+  padding:0;
+}
+
+
 .box h1{
   font-family:'Arial Narrow', Arial, sans-serif;
   font-style: italic;

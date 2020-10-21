@@ -10,15 +10,19 @@
     <title>NADAR</title>
   </head>
   <body>
+
+    <!-- <header>
+
+    </header> -->
+
     <header>
-   <div class="box">
-     <h1>NADAR</h1>
-     <h2>por Flor de Fuego</h2>
-     <p>pieza comisionada por <a href="https://casadellago.unam.mx/" target="_blank"> Casa del Lago UNAM</a></p>
-      <br>
-    </div>
-     <div class="logo"> 
-    <img src="logo1.png" alt="logo casa del lago virtual" height="100px" width="150px"> 
+      <div class="box">
+        <h1>NADAR</h1>
+        <h2>por Flor de Fuego</h2>
+        <p>pieza comisionada por <a href="https://casadellago.unam.mx/" target="_blank"> Casa del Lago UNAM</a></p>
+      </div>
+     <div class="logo">
+    <img src="logo1.png" alt="logo casa del lago virtual" height="100px" width="150px">
       </div>
       <form>
   <input type="button" value="nadar?" onclick="msj()" class="boton">
@@ -29,7 +33,7 @@ function msj() {
   alert("Pixeles y código flotan en las aguas del ciberespacio");
 }
 </script>
-    
+
     <form>
   <input type="button" value="instrucciones" onclick="msg()" class="boton2">
 </form>
@@ -39,7 +43,7 @@ function msg() {
   alert("Utiliza los botones para construir tus visuales. Los links en las imagenes te llevan a Hydra para que puedas ver su código");
 }
 </script>
-     
+
     <form>
   <input type="button" value="+ info" onclick="olivia()" class="boton3">
 </form>
@@ -51,27 +55,31 @@ function olivia() {
 </script>
     </header>
     <main>
-    <div>
-       <h2> <img src="imgs/laestrella.gif" alt="laestrella"> 
+      <div class="contenedor-imagen">
+        <img src="imgs/laestrella.gif" alt="laestrella">
+      </div>
+
          <div class="caja">
       <a href= "https://hydra.ojack.xyz/?code=bGV0JTIwYSUzRCUyMHNoYXBlKDMlMkMwLjAzKS5yb3RhdGUoMC41KSUwQWxldCUyMGIlM0QlMjBzaGFwZSgzJTJDMC4wMykucm90YXRlKC0wLjUpJTBBc2hhcGUoMyUyQzAuMDMpLmFkZChhJTJDMSkuYWRkKGIlMkMxKS5hZGQoc2hhcGUoMyUyQzAuMDMpLnJvdGF0ZSgxKSkuc2NhbGUoMikub3V0KG8xKSUwQSUwQSUwQSUwQXNyYyhvMSklMEEucmVwZWF0KDQlMkM0KSUwQS5sYXllcihzcmMobzEpJTBBLnNjYWxlKDAuNSklMEEucmVwZWF0KDIlMkMyKS5sdW1hKCkpJTBBLnNjcm9sbFkoMCUyQy0wLjIpJTBBLnJvdGF0ZSgoKSUzRCUzRXRpbWUqMC4xKSUwQS5tb2R1bGF0ZVJvdGF0ZShvc2MoNSkucm90YXRlKDAlMkMwLjIpJTJDMiklMEElMkYlMkYuY29udHJhc3QoMC45OSklMEEuYWRkKHNyYyhvMCkuY29sb3IoMC42JTJDMCUyQzEpLnNjcm9sbFkoLTAuMDAxKSUyQzAuOCklMEElMjAlMjAub3V0KCklMEElMEElMEFzcGVlZCUzRCUyMDAuMw==" target="_blank">
       Estrella
       </a>
            </div>
-       </h2> 
+       </h2>
 
         <canvas id="myCanvas"></canvas>
       <div class="caja" style="height:50px width:200px" aling="center">
       <h2>Utiliza los botones para modificar el fondo</h2>
-        </div>  
+        </div>
         <br>
-       <button onclick="osc(20).rotate(0, 0.1).modulate(noise(3),()=>mouse.x*0.01).color(0.6,0.5,1).modulate(o0,0.1).out(o0)"> mueve el mouse </button>
-      <button onclick="degradado()"> degradado </button>
-      <button onclick="useCamera()"> camara </button>
-    <button onclick="feedback()"> feedback </button>
-       <button onclick="feedback2()"> feedback 2 </button>
+        <div class="contenedor-botones">
+          <button onclick="osc(20).rotate(0, 0.1).modulate(noise(3),()=>mouse.x*0.01).color(0.6,0.5,1).modulate(o0,0.1).out(o0)"> mueve el mouse </button>
+          <button onclick="degradado()"> degradado </button>
+          <button onclick="useCamera()"> camara </button>
+          <button onclick="feedback()"> feedback </button>
+          <button onclick="feedback2()"> feedback 2 </button>
+        </div>
       <script>
-        
+
            // https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
      /* let mobileCheck = function() {
         let check = false;
@@ -97,9 +105,9 @@ function olivia() {
       var hydra = new Hydra({
         canvas: document.getElementById("myCanvas")
       });
-      
+
       src(o0).modulate(noise(3),0.008).scrollY(-0.003).layer(noise(3).color(0,1,7).luma(0.2)).out()
-      
+
       // create functions to use with buttons
       function useCamera() {
         s0.initCam()
@@ -107,18 +115,18 @@ function olivia() {
       }
      function degradado(){
      osc(10,0.1,()=>Math.sin(time)*2).color(1,0,1).out()
-     }   
-        
+     }
+
      function feedback2() {
         s0.initCam()
          src(o0)
          .scale(0.999)
-        .layer(gradient(2).repeat(8,8).modulate(noise(2)).mask(shape(3)).repeat(2,2).scrollY(0,-0.1)) 
+        .layer(gradient(2).repeat(8,8).modulate(noise(2)).mask(shape(3)).repeat(2,2).scrollY(0,-0.1))
         .out(o0)
         .render(o0)
-        
+
       }
-      
+
       function feedback() {
         src(o1)
           .layer(src(o0).mask(shape(4, 1.5, 0).scale(0.5,0.5).rotate(()=>time)))
@@ -127,31 +135,31 @@ function olivia() {
           .scale(0.999)
           .colorama(0.001)
           .out(o1)
-        
+
         render(o1)
       }
 
-      
+
     </script>
       </div>
-          <br>  
-    <div> 
-    <h2>  
+          <br>
+    <div>
+    <h2>
     <video width="500" height="500" autoplay="autoplay">
-  <source src="imgs/redsun.mp4" type="video/mp4" />
-</video>
+      <source src="imgs/redsun.mp4" type="video/mp4" />
+    </video>
       </h2>
-  <a href= "https://hydra.ojack.xyz/?code=JTBBc29saWQoKSUwQS5sYXllcih2b3Jvbm9pKDglMkMxJTJDMikuY29sb3IoMC4yJTJDMC4xJTJDJTVCMiUyQzEuNSUyQzElMkMwLjklMkMwLjglMkMyJTVELnNtb290aCgxKSkubW9kdWxhdGUob3NjKDEwKSkubHVtYSgwLjAxKSklMEElMkYlMkYucmVwZWF0KCU1QjQlMkMxJTVELnNtb290aCgxKS5mYXN0KDAuMSklMkMlNUIyJTJDMSU1RC5zbW9vdGgoMSkuZmFzdCgxKSklMEElMkYlMkYucm90YXRlKCU1QjAlMkMwLjUlMkMtMC41JTVELnNtb290aCgxKSklMEEucm90YXRlKCgpJTNEJTNFdGltZSowLjUpJTBBLm1vZHVsYXRlU2NhbGUob3NjKDEwKSUyQy0wLjUpJTBBLmFkZChzcmMobzApLmNvbG9yYW1hKC0wLjAwMSkuc2Nyb2xsWSgtMC4wMDIpLm1vZHVsYXRlKHZvcm9ub2koOCklMkMtMC4wMDEpLmNvbG9yKDElMkMwLjUlMkMwKSUyQyU1QjAuOTglMkMwLjk5JTVELnNtb290aCgxKSkuc2F0dXJhdGUoMC45OSkuY29udHJhc3QoMC45OCkuYmxlbmQoc3JjKG8wKS5zY3JvbGxYKDAuMDAxKS5jb2xvcigwJTJDMCUyQzEpJTJDJTVCMC4wOCUyQzAuMDUlMkMwLjAxJTJDMCU1RC5zbW9vdGgoMSkpLm91dCgpJTBBJTBBJTBBc3JjKG8wKS5odWUoJTVCMC4wNSUyQzAlNUQuc21vb3RoKDEpLmZhc3QoMC4xKSkub3V0KG8xKSUwQSUwQXJlbmRlcihvMSklMEElMEElMEElMEFzcGVlZCUzRCUyMDAuMw==" target="_blank">    
+  <a href= "https://hydra.ojack.xyz/?code=JTBBc29saWQoKSUwQS5sYXllcih2b3Jvbm9pKDglMkMxJTJDMikuY29sb3IoMC4yJTJDMC4xJTJDJTVCMiUyQzEuNSUyQzElMkMwLjklMkMwLjglMkMyJTVELnNtb290aCgxKSkubW9kdWxhdGUob3NjKDEwKSkubHVtYSgwLjAxKSklMEElMkYlMkYucmVwZWF0KCU1QjQlMkMxJTVELnNtb290aCgxKS5mYXN0KDAuMSklMkMlNUIyJTJDMSU1RC5zbW9vdGgoMSkuZmFzdCgxKSklMEElMkYlMkYucm90YXRlKCU1QjAlMkMwLjUlMkMtMC41JTVELnNtb290aCgxKSklMEEucm90YXRlKCgpJTNEJTNFdGltZSowLjUpJTBBLm1vZHVsYXRlU2NhbGUob3NjKDEwKSUyQy0wLjUpJTBBLmFkZChzcmMobzApLmNvbG9yYW1hKC0wLjAwMSkuc2Nyb2xsWSgtMC4wMDIpLm1vZHVsYXRlKHZvcm9ub2koOCklMkMtMC4wMDEpLmNvbG9yKDElMkMwLjUlMkMwKSUyQyU1QjAuOTglMkMwLjk5JTVELnNtb290aCgxKSkuc2F0dXJhdGUoMC45OSkuY29udHJhc3QoMC45OCkuYmxlbmQoc3JjKG8wKS5zY3JvbGxYKDAuMDAxKS5jb2xvcigwJTJDMCUyQzEpJTJDJTVCMC4wOCUyQzAuMDUlMkMwLjAxJTJDMCU1RC5zbW9vdGgoMSkpLm91dCgpJTBBJTBBJTBBc3JjKG8wKS5odWUoJTVCMC4wNSUyQzAlNUQuc21vb3RoKDEpLmZhc3QoMC4xKSkub3V0KG8xKSUwQSUwQXJlbmRlcihvMSklMEElMEElMEElMEFzcGVlZCUzRCUyMDAuMw==" target="_blank">
    <div class="caja">
-     <h2><a href="https://hydra.ojack.xyz/?code=JTBBc29saWQoKSUwQS5sYXllcih2b3Jvbm9pKDglMkMxJTJDMikuY29sb3IoMC4yJTJDMC4xJTJDJTVCMiUyQzEuNSUyQzElMkMwLjklMkMwLjglMkMyJTVELnNtb290aCgxKSkubW9kdWxhdGUob3NjKDEwKSkubHVtYSgwLjAxKSklMEEucm90YXRlKCgpJTNEJTNFdGltZSowLjUpJTBBLm1vZHVsYXRlU2NhbGUob3NjKDEwKSUyQy0wLjUpJTBBLmFkZChzcmMobzApLmNvbG9yYW1hKC0wLjAwMSkuc2Nyb2xsWSgtMC4wMDIpJTBBLm1vZHVsYXRlKHZvcm9ub2koOCklMkMtMC4wMDEpLmNvbG9yKDElMkMwLjUlMkMwKSUyQyU1QjAuOTglMkMwLjk5JTVELnNtb290aCgxKSklMEEuc2F0dXJhdGUoMC45OSkuY29udHJhc3QoMC45OCkuYmxlbmQoc3JjKG8wKSUwQS5zY3JvbGxYKDAuMDAxKS5jb2xvcigwJTJDMCUyQzEpJTJDJTVCMC4wOCUyQzAuMDUlMkMwLjAxJTJDMCU1RC5zbW9vdGgoMSkpJTBBLm91dCgpJTBBJTBBJTBBc3JjKG8wKS5odWUoJTVCMC4wNSUyQzAlNUQuc21vb3RoKDEpLmZhc3QoMC4xKSkub3V0KG8xKSUwQSUwQXJlbmRlcihvMSklMEElMEElMEElMEFzcGVlZCUzRCUyMDAuMw==" target="_blank">blazed</a></h2>   
+     <h2><a href="https://hydra.ojack.xyz/?code=JTBBc29saWQoKSUwQS5sYXllcih2b3Jvbm9pKDglMkMxJTJDMikuY29sb3IoMC4yJTJDMC4xJTJDJTVCMiUyQzEuNSUyQzElMkMwLjklMkMwLjglMkMyJTVELnNtb290aCgxKSkubW9kdWxhdGUob3NjKDEwKSkubHVtYSgwLjAxKSklMEEucm90YXRlKCgpJTNEJTNFdGltZSowLjUpJTBBLm1vZHVsYXRlU2NhbGUob3NjKDEwKSUyQy0wLjUpJTBBLmFkZChzcmMobzApLmNvbG9yYW1hKC0wLjAwMSkuc2Nyb2xsWSgtMC4wMDIpJTBBLm1vZHVsYXRlKHZvcm9ub2koOCklMkMtMC4wMDEpLmNvbG9yKDElMkMwLjUlMkMwKSUyQyU1QjAuOTglMkMwLjk5JTVELnNtb290aCgxKSklMEEuc2F0dXJhdGUoMC45OSkuY29udHJhc3QoMC45OCkuYmxlbmQoc3JjKG8wKSUwQS5zY3JvbGxYKDAuMDAxKS5jb2xvcigwJTJDMCUyQzEpJTJDJTVCMC4wOCUyQzAuMDUlMkMwLjAxJTJDMCU1RC5zbW9vdGgoMSkpJTBBLm91dCgpJTBBJTBBJTBBc3JjKG8wKS5odWUoJTVCMC4wNSUyQzAlNUQuc21vb3RoKDEpLmZhc3QoMC4xKSkub3V0KG8xKSUwQSUwQXJlbmRlcihvMSklMEElMEElMEElMEFzcGVlZCUzRCUyMDAuMw==" target="_blank">blazed</a></h2>
      </div>
       </a>
     </div>
         <div>
-         <h2> 
+         <h2>
       <img src="imgs/fugaz.gif" alt="fugaz" aling="center">
           <div class="caja">
-          <a href="https://hydra.ojack.xyz/?code=JTBBJTIwJTBBc3JjKG8wKSUwQS5sYXllcihzaGFwZSg0JTJDMC4xKS5tdWx0KG9zYygxNTApLmthbGVpZCgzMDApLm1vZHVsYXRlKG5vaXNlKDMpKSkuc2NhbGUoJTVCMS41JTJDMSUyQzAuNSU1RC5zbW9vdGgoKSUyQyU1QjAuNSUyQzElNUQuc21vb3RoKCkpLmx1bWEoKSkuc2NhbGUoJTVCMS4wMDElMkMxLjAwNSU1RC5zbW9vdGgoMSkpJTBBLnNjcm9sbFkoMC4wMDUpLnNjcm9sbFgoJTVCMC4wMDElMkMtMC4wMDElMkMwLjAwMiUyQy0wLjAwMyU1RC5zbW9vdGgoMSkpLnNoaWZ0KC0wLjAxJTJDMCUyQy0wLjAxKS5jb2xvcmFtYSgtMC4wMSkub3V0KCklMEElMEElMEFzcGVlZCUzRCUyMDAuMg==" target="_blank">fugaz</a> 
+          <a href="https://hydra.ojack.xyz/?code=JTBBJTIwJTBBc3JjKG8wKSUwQS5sYXllcihzaGFwZSg0JTJDMC4xKS5tdWx0KG9zYygxNTApLmthbGVpZCgzMDApLm1vZHVsYXRlKG5vaXNlKDMpKSkuc2NhbGUoJTVCMS41JTJDMSUyQzAuNSU1RC5zbW9vdGgoKSUyQyU1QjAuNSUyQzElNUQuc21vb3RoKCkpLmx1bWEoKSkuc2NhbGUoJTVCMS4wMDElMkMxLjAwNSU1RC5zbW9vdGgoMSkpJTBBLnNjcm9sbFkoMC4wMDUpLnNjcm9sbFgoJTVCMC4wMDElMkMtMC4wMDElMkMwLjAwMiUyQy0wLjAwMyU1RC5zbW9vdGgoMSkpLnNoaWZ0KC0wLjAxJTJDMCUyQy0wLjAxKS5jb2xvcmFtYSgtMC4wMSkub3V0KCklMEElMEElMEFzcGVlZCUzRCUyMDAuMg==" target="_blank">fugaz</a>
           </div>
            </h2>
              <h2>
@@ -161,8 +169,8 @@ function olivia() {
                 </div>
                 </h2>
                  <canvas id="gatitxs" align="center"></canvas>
-     <iframe src="https://hydra.ojack.xyz/?code=JTBBaW1nRTElMjAlM0QlMjBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdpbWcnKSUwQWltZ0UxLmNyb3NzT3JpZ2luJTIwJTNEJ2Fub255bXVzJyUwQWltZ0UxLnNyYyUyMCUzRCUyMCdodHRwcyUzQSUyRiUyRmkuaWJiLmNvJTJGTGRuUU5nWSUyRkNhdC5wbmcnJTBBJTBBczAuaW5pdCglN0JzcmMlM0FpbWdFMSU3RCklMEElMEFzcmMobzApJTBBLnNjcm9sbFkoMC4wMDMpJTBBLnNjcm9sbFgoLTAuMDAxKSUwQS5tb2R1bGF0ZShvMCUyQzAuMDAxKSUwQS5odWUoMC4wMDEpJTBBLnNhdHVyYXRlKDEuMDUpJTBBLmxheWVyKCUwQWdyYWRpZW50KDIpJTBBLnJlcGVhdCg0JTJDOCklMEEubW9kdWxhdGUobm9pc2UoMikpJTBBLm1hc2soc2hhcGUoMyUyQyU1QjAuNSUyQzAlNUQlMEEuc21vb3RoKCkpJTBBLnJvdGF0ZSgoKSUzRCUzRXRpbWUqMC41KSklMEEucmVwZWF0KDIlMkMyKSUwQSkubGF5ZXIoc3JjKHMwKSUwQSUyRiUyRi5yb3RhdGUoKCklM0QlM0V0aW1lKi0wLjIpJTBBLnNjYWxlKDAuNSklMEEuc2Nyb2xsWSgoKSUzRCUzRW1vdXNlLnkqLTAuMDAzKSUwQS5zY3JvbGxYKCgpJTNEJTNFbW91c2UueCowLjAwMSkpJTBBLnNhdHVyYXRlKCgpJTNEJTNFbW91c2UueCowLjAxKSUwQS5vdXQoKQ=="width="600" height="600" frameborder="0"></iframe> 
-           
+     <iframe src="https://hydra.ojack.xyz/?code=JTBBaW1nRTElMjAlM0QlMjBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdpbWcnKSUwQWltZ0UxLmNyb3NzT3JpZ2luJTIwJTNEJ2Fub255bXVzJyUwQWltZ0UxLnNyYyUyMCUzRCUyMCdodHRwcyUzQSUyRiUyRmkuaWJiLmNvJTJGTGRuUU5nWSUyRkNhdC5wbmcnJTBBJTBBczAuaW5pdCglN0JzcmMlM0FpbWdFMSU3RCklMEElMEFzcmMobzApJTBBLnNjcm9sbFkoMC4wMDMpJTBBLnNjcm9sbFgoLTAuMDAxKSUwQS5tb2R1bGF0ZShvMCUyQzAuMDAxKSUwQS5odWUoMC4wMDEpJTBBLnNhdHVyYXRlKDEuMDUpJTBBLmxheWVyKCUwQWdyYWRpZW50KDIpJTBBLnJlcGVhdCg0JTJDOCklMEEubW9kdWxhdGUobm9pc2UoMikpJTBBLm1hc2soc2hhcGUoMyUyQyU1QjAuNSUyQzAlNUQlMEEuc21vb3RoKCkpJTBBLnJvdGF0ZSgoKSUzRCUzRXRpbWUqMC41KSklMEEucmVwZWF0KDIlMkMyKSUwQSkubGF5ZXIoc3JjKHMwKSUwQSUyRiUyRi5yb3RhdGUoKCklM0QlM0V0aW1lKi0wLjIpJTBBLnNjYWxlKDAuNSklMEEuc2Nyb2xsWSgoKSUzRCUzRW1vdXNlLnkqLTAuMDAzKSUwQS5zY3JvbGxYKCgpJTNEJTNFbW91c2UueCowLjAwMSkpJTBBLnNhdHVyYXRlKCgpJTNEJTNFbW91c2UueCowLjAxKSUwQS5vdXQoKQ=="width="600" height="600" frameborder="0"></iframe>
+
 <code><span class="ascii" style="color: white; background:  rgba(4, 0, 255, 0.5);
 display:inline-block;
 margin-left: 25px;
@@ -256,11 +264,11 @@ border-color:rgba(4, 0, 255);">
 <span>(</span><span>(</span><span>@</span><span>#</span><span>,</span><span>@</span><span>.</span><span>@</span><span>/</span><span>%</span><span>&</span><span>#</span><span>@</span><span>(</span><span>@</span><span>%</span><span>@</span><span>@</span><span>&</span><span>@</span><span>%</span><span>@</span><span>&</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>&</span><span>%</span><span>/</span><span>.</span><span>(</span><span>,</span><span>(</span><span>(</span><span>/</span><span>%</span><span>*</span><span>&</span><span>,</span><span>@</span><span>,</span><span>&</span><span>/</span><span>#</span><span>@</span><span>*</span><span>&</span><span>,</span><span>&</span><span>(</span><span>&</span><span>(</span><span>&</span><span>#</span><span>#</span><span>@</span><span>#</span><span>#</span><span>#</span><span>%</span><span>&</span><span>@</span><span>&</span><span>&</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>%</span><span>/</span><span>,</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>/</span><span>/</span><span>/</span><span>(</span><span>(</span><span>(</span><span>(</span><span>(</span><span>#</span><span>#</span><span>#</span><span>#</span><span>#</span><span>%</span><span>%</span><span>%</span><span>%</span><span>%</span><span>%</span><span>&</span><span>&</span><span>&</span><span>&</span><span>&</span><span>&</span><span>&</span><span>&</span><span>&</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>&</span><span>&</span><span>&</span><span>&</span><span>&</span><span>&</span><span>%</span><span>%</span><span>%</span><span>%</span><span>%</span><span>%</span><span>%</span><span>#</span><span>#</span><span>#</span><span>#</span><span>#</span><span>#</span><span>(</span><span>(</span><span>(</span><span>(</span><span>(</span><span>/</span><span>/</span><span>/</span><span>*</span><span>*</span><span>*</span><span>*</span><span>,</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>/</span><span>/</span><span>/</span><span>/</span><span>(</span><span>(</span><span>#</span><span>#</span><span>%</span><span>%</span><span>&</span><span>&</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>%</span><span>@</span>
 <span>(</span><span>(</span><span>@</span><span>&</span><span>,</span><span>@</span><span>#</span><span>(</span><span>@</span><span>*</span><span>@</span><span>*</span><span>@</span><span>/</span><span>@</span><span>(</span><span>@</span><span>(</span><span>@</span><span>#</span><span>@</span><span>&</span><span>&</span><span>@</span><span>&</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>&</span><span>#</span><span>,</span><span>/</span><span>.</span><span>%</span><span>,</span><span>/</span><span>%</span><span>,</span><span>&</span><span>,</span><span>&</span><span>#</span><span>%</span><span>@</span><span>,</span><span>@</span><span>.</span><span>@</span><span>*</span><span>#</span><span>#</span><span>/</span><span>&</span><span>(</span><span>@</span><span>/</span><span>&</span><span>%</span><span>#</span><span>(</span><span>@</span><span>%</span><span>%</span><span>&</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>&</span><span>/</span><span>.</span><span>*</span><span>,</span><span>*</span><span>*</span><span>*</span><span>*</span><span>/</span><span>/</span><span>/</span><span>/</span><span>/</span><span>(</span><span>(</span><span>(</span><span>(</span><span>#</span><span>#</span><span>#</span><span>#</span><span>#</span><span>%</span><span>%</span><span>%</span><span>%</span><span>%</span><span>%</span><span>%</span><span>&</span><span>&</span><span>&</span><span>&</span><span>&</span><span>&</span><span>&</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>@</span><span>&</span><span>&</span><span>&</span><span>&</span><span>&</span><span>&</span><span>&</span><span>%</span><span>%</span><span>%</span><span>%</span><span>%</span><span>%</span><span>%</span><span>#</span><span>#</span><span>#</span><span>#</span><span>#</span><span>(</span><span>(</span><span>(</span><span>(</span><span>/</span><span>/</span><span>/</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>*</span><span>/</span><span>/</span><span>/</span><span>(</span><span>(</span><span>(</span><span>%</span><span>%</span><span>%</span><span>&</span><span>&</span><span>%</span><span>@</span><span>#</span><span>&</span><span>@</span><span>(</span><span>&</span><span>@</span><span>*</span>
 </span></code>
-          
+
  </main>
         <footer>
         <h2> Agradecimientos a <a href="https://ojack.xyz/" target="_blank">Olivia Jack</a> y <a href="https://hydra-book.naotohieda.com/#/" target="_blank">Naoto Hieda</a> por incentivarme a hacer paginas web</h2>
           <h2>basado en <a href="https://glitch.com/edit/#!/hydra-webpage" target="_blank">Hydra webpage</a> y <a href="https://hydra-meetup-2-naoto.glitch.me/" target="_blank">Naoto's webpage</a></h2>
       </footer>
-  </body> 
+  </body>
 </html>
